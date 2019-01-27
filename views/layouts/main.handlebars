@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<title>LA Times Scraper</title>
+</head>
+
+<body>
+	<header>
+		<a href="/">
+			<div id="scrapelocation">LA Times Scraper</div>
+		</a>
+		<a href="/">
+			<button id="all-articles">All Articles</button>
+		</a>
+		<a href="/saved">
+			<button id="saved-articles">Saved Articles</button>
+		</a>
+		<form action="/scrape" method="GET">
+			<button type="submit" id="refresh-articles">Refresh New Articles</button>
+		</form>
+	</header>
+	<img id="lat" src="/assets/images/lat.png" height="500px">
+	<div id="container">
+		{{{ body }}}
+	</div>
+
+	<script src="/assets/javascript/app.js"></script>
+
+	<div id="notecreate">
+		<div id="note-displayer">
+			<h2>Article Comment</h2>
+			<h3>Article:
+				<span id="article-title"></span>
+			</h3>
+			<div id="note">
+				<label for="note-title">Title</label>
+				<br>
+				<input type="text" placeholder="Title" name="title" id="note-title">
+				<br>
+				<label for="note-body">Comment</label>
+				<br>
+				<textarea rows="10" placeholder="Comments" id="note-body"></textarea>
+				<br>
+				<button type="submit" id="add-note">Save Comment</button>
+				<button type="button" id="close-note">Cancel</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="/assets/javascript/app.js"></script>
+</body>
+
+</html>
